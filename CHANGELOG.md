@@ -19,6 +19,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * Update README to reflect the new maintainer, module name and Terraform registry source address ([b9924be](https://github.com/pawelpesz/terraform-aws-remote-state-s3-backend-v2/commit/b9924bed1891888d8680e40ff817ad43d48307f2))
 * Updated repo link in the CHANGELOG config ([6646f38](https://github.com/pawelpesz/terraform-aws-remote-state-s3-backend-v2/commit/6646f385e9f2733a192e6ee4dd9ce2dbb3b126a4))
 
+### Documentation
+
+* docs: Updated README to reflect recent changes ([1e432e0](https://github.com/pawelpesz/terraform-aws-remote-state-s3-backend-v2/commit/1e432e02d4defeb47ce9cd78b70fdb111e5c5d88))
+
 ## [1.7.0](https://github.com/pawelpesz/terraform-aws-remote-state-s3-backend-v2/compare/v1.6.1...v1.7.0) (2025-05-16)
 
 
