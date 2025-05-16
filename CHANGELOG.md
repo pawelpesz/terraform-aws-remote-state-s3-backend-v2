@@ -5,6 +5,24 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.0.0](https://github.com/pawelpesz/terraform-aws-remote-state-s3-backend-v2/compare/v1.7.0...v2.0.0) (2025-05-16)
+
+
+### ⚠ BREAKING CHANGES
+
+* New maintainer, module name and Terraform registry source address
+
+### Features
+
+* Added docs & chores to git-chglog config ([db1266d](https://github.com/pawelpesz/terraform-aws-remote-state-s3-backend-v2/commit/db1266da4e7f4c889b6b864804708b9b847a3580))
+* Added new maintainer's name to the LICENSE ([d63a732](https://github.com/pawelpesz/terraform-aws-remote-state-s3-backend-v2/commit/d63a73279dbf1680ff620edf65465729ad709fe7))
+* Update README to reflect the new maintainer, module name and Terraform registry source address ([b9924be](https://github.com/pawelpesz/terraform-aws-remote-state-s3-backend-v2/commit/b9924bed1891888d8680e40ff817ad43d48307f2))
+* Updated repo link in the CHANGELOG config ([6646f38](https://github.com/pawelpesz/terraform-aws-remote-state-s3-backend-v2/commit/6646f385e9f2733a192e6ee4dd9ce2dbb3b126a4))
+
+### Documentation
+
+* docs: Updated README to reflect recent changes ([1e432e0](https://github.com/pawelpesz/terraform-aws-remote-state-s3-backend-v2/commit/1e432e02d4defeb47ce9cd78b70fdb111e5c5d88))
+
 ## [1.7.0](https://github.com/pawelpesz/terraform-aws-remote-state-s3-backend-v2/compare/v1.6.1...v1.7.0) (2025-05-16)
 
 
