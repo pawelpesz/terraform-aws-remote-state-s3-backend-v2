@@ -7,7 +7,8 @@
 
 > A special shout out and a big thank you goes out to [nozaq](https://github.com/nozaq), the original author of the module.
 
-A terraform module to set up [remote state management](https://www.terraform.io/docs/state/remote.html) with [S3 backend](https://www.terraform.io/docs/backends/types/s3.html) for your account. It creates an encrypted S3 bucket to store state files and a DynamoDB table for state locking and consistency checking.
+A Terraform module to set up [remote state management](https://www.terraform.io/docs/state/remote.html) with [S3 backend](https://www.terraform.io/docs/backends/types/s3.html) for your account. It creates an encrypted S3 bucket to store state files and optionally a DynamoDB table for state locking and consistency checking. The latter was [deprecated](https://github.com/hashicorp/terraform/blob/v1.11/CHANGELOG.md#1110-february-27-2025) in Terraform 1.11, but is enabled by default.
+
 Resources are defined following best practices as described in [the official document](https://www.terraform.io/docs/backends/types/s3.html#multi-account-aws-architecture) and [ozbillwang/terraform-best-practices](https://github.com/ozbillwang/terraform-best-practices).
 
 ## Features
@@ -16,14 +17,14 @@ Resources are defined following best practices as described in [the official doc
 - Encrypt state files with KMS.
 - Enable bucket replication and object versioning to prevent accidental data loss.
 - Automatically transit non-current versions in S3 buckets to AWS S3 Glacier to optimize the storage cost.
-- Optionally you can set to expire aged non-current versions(disabled by default).
-- Optionally you can set fixed S3 bucket name to be user friendly(false by default).
-- Create a DynamoDB table for state locking, encryption is optional.
+- Optionally you can set to expire aged non-current versions (disabled by default).
+- Optionally you can set fixed S3 bucket name to be user friendly (false by default).
+- Optionally create a DynamoDB table for state locking (enabled by default), encryption is optional.
 - Optionally create an IAM policy to allow permissions which Terraform needs.
 
 ## Usage
 
-The module outputs `terraform_iam_policy` which can be attached to IAM users, groups or roles running Terraform. This will allow the entity accessing remote state files and the locking table. This can optionally be disabled with `terraform_iam_policy_create = false`
+The module outputs `terraform_iam_policy` which can be attached to IAM users, groups or roles running Terraform. This will allow the entity accessing remote state files and the locking table. This can optionally be disabled with `terraform_iam_policy_create = false`.
 
 ```hcl
 provider "aws" {
@@ -56,7 +57,7 @@ resource "aws_iam_user_policy_attachment" "remote_state_access" {
 
 Note that you need to provide two providers, one for the main state bucket and the other for the bucket to which the main state bucket is replicated to. Two providers must point to different AWS regions.
 
-Once resources are created, you can configure your terraform files to use the S3 backend as follows.
+Once resources are created, you can configure your Terraform files to use the S3 backend as follows.
 
 ```hcl
 terraform {
