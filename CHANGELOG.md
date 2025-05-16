@@ -5,6 +5,23 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.7.0](https://github.com/pawelpesz/terraform-aws-remote-state-s3-backend-v2/compare/v1.6.1...v1.7.0) (2025-05-16)
+
+
+### Features
+
+* Make DynamoDB table creation optional ([a9dd4f2](https://github.com/pawelpesz/terraform-aws-remote-state-s3-backend-v2/commit/a9dd4f20ab84a741e15b612b55c95be0a2cc5221))
+* Module use example for Terraform 1.11+ ([765543e](https://github.com/pawelpesz/terraform-aws-remote-state-s3-backend-v2/commit/765543eeb7e5d4c152bf7bd4bf6560ac6bc2a9bb))
+* Support for S3 lock file IAM permissions ([d10daf4](https://github.com/pawelpesz/terraform-aws-remote-state-s3-backend-v2/commit/d10daf48f9992429d1bcd4794b022fe9acfcdd5e))
+* Updated actions used in GHA workflows ([f63c4d8](https://github.com/pawelpesz/terraform-aws-remote-state-s3-backend-v2/commit/f63c4d8d6cb55f1c34db5f03b4c0b8137e0e7435))
+* Updated pre-commit-terraform hook ([7f89565](https://github.com/pawelpesz/terraform-aws-remote-state-s3-backend-v2/commit/7f895658b29ac0e8cdaf119fdf37601362e9f229))
+* Use Ubuntu 24.04 runners instead of latest in GHA workflows ([f52b1df](https://github.com/pawelpesz/terraform-aws-remote-state-s3-backend-v2/commit/f52b1df28740dd52fb491edc87f983c367bc27a3))
+
+
+### Bug Fixes
+
+* Update deprecated option in tflint configuration ([8deb15d](https://github.com/pawelpesz/terraform-aws-remote-state-s3-backend-v2/commit/8deb15d5cbcb878173384ec1b2328efc1b7a2f9f))
+
 ## [1.6.1](https://github.com/nozaq/terraform-aws-remote-state-s3-backend/compare/v1.6.0...v1.6.1) (2024-04-20)
 
 
